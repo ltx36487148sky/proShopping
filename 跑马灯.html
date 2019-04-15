@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            /* width: 100%; */
+            width: 510px;
+            height: 50px;
+            line-height: 50px;
+            background-color: black;
+            color: white;
+            padding-left:10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- behavior 行为 滚动方式：
+            scroll 连续滚动
+            laternate  反复，来回滚动
+            slide  只滚动一次，滚动到默认的左边就不在动了
+        direction  方向
+                默认是从右往左的方向
+                left
+                从左往右，right
+                从上到下 down
+                从下往上 up
+        scrollamount 滚动速度
+            默认值6
+            数值越大，速度越快
+
+    -->
+    <marquee behavior="" direction="">匆匆离去。我们像是表面上的时钟，不停的转动，一面转，一面看着时间</marquee>
+    <div>匆匆离去。我们像是表面上的时钟，不停的转动，一面转，一面看着时间</div>
+    <script>
+        var div = document.querySelector('div');
+        var jishi = setInterval(function(){
+            // 将第一个文字剪切放到字符串的最后一个位置
+            div.innerHTML = div.innerHTML.slice(1)+div.innerHTML.charAt(0);
+        },100)
+    </script>
+</body>
+</html>
